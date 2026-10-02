@@ -30,11 +30,6 @@
     width: 100%;
     max-width: 380px;
     padding: 28px 24px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .04));
-    -webkit-backdrop-filter: blur(18px) saturate(140%);
-    backdrop-filter: blur(18px) saturate(140%);
-    border-radius: 24px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, .4);
   }
   .time {
     margin: 20px 0 24px;
@@ -58,6 +53,8 @@
     cursor: pointer;
     color: #f6ede2;
     background: rgba(255, 255, 255, .12);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     box-shadow: 0 4px 14px rgba(0, 0, 0, .2);
     transition: filter .15s, transform .05s, background .2s;
   }
@@ -82,12 +79,6 @@
   }
   .laps .no { color: #c9a98a; }
   .laps .diff { color: #c9a98a; }
-  .hint {
-    margin-top: 16px;
-    text-align: center;
-    font-size: 12px;
-    color: #9c8672;
-  }
 </style>
 </head>
 <body>
@@ -100,7 +91,6 @@
       <button id="resetBtn" disabled>초기화</button>
     </div>
     <ul class="laps" id="laps"></ul>
-    <p class="hint">Space: 시작/정지 · L: 랩 · R: 초기화</p>
   </div>
 
 <script>
